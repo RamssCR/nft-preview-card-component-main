@@ -1,0 +1,140 @@
+@use 'vars' as v;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    background-color: v.$VeryDarkBlue1;
+    color: v.$White;
+    font-family: v.$fontFamily;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 130vh;
+
+    @media only screen and (min-width: 1115px){
+        height: 110vh;
+    }
+}
+
+.main-content{
+    max-width: 21em;
+    background-color: v.$VeryDarkBlue2;
+    padding: 1.5em;
+    border-radius: 0.8em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .container{
+        position: relative;
+    }
+
+    .overlay{
+        height: 19em;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: hsla(178, 100%, 50%, 0.459);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5em;
+        position: absolute;
+        top: 0;
+    }
+    .container:hover .overlay{
+        opacity: 1;
+    }
+
+    .img{
+        width: 100%;
+        border-radius: 0.5em;
+        position: relative;
+        height: 19em;
+    }
+
+    .title{
+        font-weight: 600;
+        font-size: 1.3em;
+        letter-spacing: 2px;
+
+        &:hover{
+            color: v.$Cyan;
+            cursor: pointer;
+        }
+    }
+
+    .main-text{
+        color: v.$OWhite;
+        line-height: 1.7em;
+        font-weight: 300;
+    }
+
+    .info{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid v.$VeryDarkBlue3;
+        padding-bottom: 1.1em;
+
+        .eth{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .price{
+                color: v.$Cyan;
+            }
+
+            .time{
+                color: v.$OWhite;
+            }
+        }
+    }
+
+    .user{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        &-avatar{
+            width: 2.2em;
+            border: 1px solid v.$White;
+            border-radius: 50%;
+        }
+
+        &-creation{
+            color: v.$OWhite;
+
+            span{
+                color: v.$White;
+
+                &:hover{
+                    color: v.$Cyan;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.attribution{
+    text-align: center;
+    font-size: 0.9em;
+    padding: 1em 0;
+    
+    a{
+        color: v.$Cyan;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

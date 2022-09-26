@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 130vh;
+}
+@media only screen and (min-width: 1115px) {
+  body {
+    height: 110vh;
+  }
+}
+
+.main-content {
+  max-width: 21em;
+  background-color: hsl(216deg, 50%, 16%);
+  padding: 1.5em;
+  border-radius: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main-content .container {
+  position: relative;
+}
+.main-content .overlay {
+  height: 19em;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: hsla(178deg, 100%, 50%, 0.459);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 0;
+}
+.main-content .container:hover .overlay {
+  opacity: 1;
+}
+.main-content .img {
+  width: 100%;
+  border-radius: 0.5em;
+  position: relative;
+  height: 19em;
+}
+.main-content .title {
+  font-weight: 600;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+}
+.main-content .title:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.main-content .main-text {
+  color: hsla(0deg, 0%, 100%, 0.5);
+  line-height: 1.7em;
+  font-weight: 300;
+}
+.main-content .info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  padding-bottom: 1.1em;
+}
+.main-content .info .eth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.main-content .info .eth .price {
+  color: hsl(178deg, 100%, 50%);
+}
+.main-content .info .eth .time {
+  color: hsla(0deg, 0%, 100%, 0.5);
+}
+.main-content .user {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.main-content .user-avatar {
+  width: 2.2em;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.main-content .user-creation {
+  color: hsla(0deg, 0%, 100%, 0.5);
+}
+.main-content .user-creation span {
+  color: hsl(0deg, 0%, 100%);
+}
+.main-content .user-creation span:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 1em 0;
+}
+.attribution a {
+  color: hsl(178deg, 100%, 50%);
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */
